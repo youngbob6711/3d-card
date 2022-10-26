@@ -22,14 +22,16 @@ const Card = () => {
       >
         <div className='w-full h-full flex justify-center items-center'>
           <div className='flex flex-col justify-center items-center'>
-            <h2 className='text-[48px] text-white absolute top-20 uppercase'>
-              Heading 1
+            <div className='bg-skull w-[600px] h-[600px] bg-cover'></div>
+            <h2 className='text-[48px] text-white absolute top-10 uppercase font-extrabold text-center leading-tight max-w-[320px]'>
+              UOOOO TRICK OR TREAT!!
             </h2>
             <motion.div
               style={{ x, y, rotateX, rotateY, z: 100000 }}
               drag
               dragElastic={0.12}
               whileTap={{ cursor: 'grabbing' }}
+              className='absolute top-48'
             >
               <img src={PumpkinImg} alt='' />
             </motion.div>
