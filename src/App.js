@@ -3,7 +3,7 @@ import Card from './components/Card';
 
 const App = () => {
   return (
-    <div className='w-full h-screen flex justify-center items-center  bg-[#B1A29D]'>
+    <div className='w-full h-screen flex justify-center items-center bg-[#b1a29d]'>
       <Card />
     </div>
   );
