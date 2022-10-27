@@ -30,24 +30,24 @@ const Card = () => {
         whileTap={{ cursor: 'grabbing' }}
         className='min-h-[600px] bg-[#E4DFDC] w-[426px] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-grab'
       >
-        {/* logo */}
+        {/* card logo */}
         <div className='mb-6'>
           <img src={Logo} alt='' />
         </div>
-        {/* title */}
+        {/* card title */}
         <h1 className='text-5xl mb-6 font-extrabold'>Nike Air Max Pre-Day</h1>
-        {/* subtitle */}
-        <p className='max-w-[300px] font-light text-[#000000] mb-6'>
+        {/* card subtitle */}
+        <p className='max-w-[300px] text-[#000000] mb-6'>
           Taking the classic look of heritage Nike Running into a new realm, the
           Nike Air Max Pre-Day brings you a fast-paced look that's ready for
           today's world.
         </p>
         <div className='flex items-center gap-x-[20px] mb-12'>
-          {/* button */}
+          {/* card button */}
           <button className='bg-[#2d2b2c] text-white text-base font-medium py-[16px] px-[40px] rounded-lg'>
             Add to Bag
           </button>
-          {/* price */}
+          {/* card price */}
           <div className='text-[24px] font-bold text-[#000000]'>$495.00</div>
         </div>
         <ul className='flex gap-x-[10px]'>
@@ -61,7 +61,7 @@ const Card = () => {
             );
           })}
         </ul>
-        {/* image */}
+        {/* card image */}
         <motion.div
           style={{ x, y, rotateX, rotateY, z: 100000 }}
           drag
