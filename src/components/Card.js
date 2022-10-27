@@ -64,12 +64,9 @@ const Card = () => {
         {/* card image */}
         <motion.div
           style={{ x, y, rotateX, rotateY, z: 100000 }}
-          drag
-          dragElastic={0.14}
-          whileTap={{ cursor: 'grabbing' }}
           className='absolute w-[620px] top-12 -right-64'
         >
-          <img src={ShoeImg} alt='' />
+          <img draggable='false' src={ShoeImg} alt='' />
         </motion.div>
       </motion.div>
     </div>
