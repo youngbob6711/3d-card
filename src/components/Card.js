@@ -1,8 +1,11 @@
 import React from 'react';
-import Logo from '../img/logo.svg';
-import Nike from '../img/nike.png';
+// logo
+import LogoImg from '../img/logo.svg';
+// nike img
+import NikeImg from '../img/nike.png';
 
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+// import framer hooks
+import { useMotionValue, useTransform, motion } from 'framer-motion';
 
 const Card = () => {
   const x = useMotionValue(0);
@@ -28,45 +31,45 @@ const Card = () => {
         dragElastic={0.18}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
         whileTap={{ cursor: 'grabbing' }}
-        className='min-h-[600px] bg-[#E4DFDC] w-[426px] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-grab'
+        className='w-[426px] min-h-[600px] bg-[#e4dfdc] rounded-[30px] border-[4px] border-white px-[40px] py-[24px] cursor-grab relative'
       >
         {/* card logo */}
         <div className='mb-6'>
-          <img src={Logo} alt='' />
+          <img src={LogoImg} alt='' />
         </div>
         {/* card title */}
         <h1 className='text-5xl mb-6 font-extrabold'>Nike Air Max Pre-Day</h1>
         {/* card subtitle */}
         <p className='max-w-[300px] text-[#000000] mb-6'>
-          Taking the classic look of heritage Nike Running into a new realm, the
+          Taking the classic look of heritage Nike Running into new realm, the
           Nike Air Max Pre-Day brings you a fast-paced look that's ready for
           today's world.
         </p>
+        {/* btn & price wrapper */}
         <div className='flex items-center gap-x-[20px] mb-12'>
-          {/* card button */}
           <button className='bg-[#2d2b2c] text-white text-base font-medium py-[16px] px-[40px] rounded-lg'>
             Add to Bag
           </button>
-          {/* card price */}
           <div className='text-[24px] font-bold text-[#000000]'>$495.00</div>
         </div>
+        {/* colors */}
         <ul className='flex gap-x-[10px]'>
           {colors.map((color, index) => {
             return (
-              <div
+              <li
+                key={index}
                 style={{ backgroundColor: color.value }}
                 className='w-8 h-8 rounded-full cursor-pointer'
-                key={index}
-              ></div>
+              ></li>
             );
           })}
         </ul>
         {/* card image */}
         <motion.div
           style={{ x, y, rotateX, rotateY, z: 100000 }}
-          className='absolute w-[620px] top-12 -right-64'
+          className='absolute top-12 -right-64 w-[620px]'
         >
-          <img draggable='false' src={Nike} alt='' />
+          <img src={NikeImg} alt='' draggable='false' />
         </motion.div>
       </motion.div>
     </div>
