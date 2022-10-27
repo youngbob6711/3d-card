@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../img/logo.svg';
-import ShoeImg from '../img/shoe.png';
+import Nike from '../img/nike.png';
 
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
@@ -66,7 +66,7 @@ const Card = () => {
           style={{ x, y, rotateX, rotateY, z: 100000 }}
           className='absolute w-[620px] top-12 -right-64'
         >
-          <img draggable='false' src={ShoeImg} alt='' />
+          <img draggable='false' src={Nike} alt='' />
         </motion.div>
       </motion.div>
     </div>
